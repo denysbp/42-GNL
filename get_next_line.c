@@ -57,7 +57,7 @@ int	ft_clear(char **received, size_t end, int ex)
 {
 	char	*new;
 
-	if (ex == 0)
+	if (! ex)
 	{
 		if ((*received)[0] == '\0')
 		{
@@ -67,20 +67,16 @@ int	ft_clear(char **received, size_t end, int ex)
 		}
 		return (0);
 	}
+	if (ft_strlen(*received) > end + 1)
+	{
+		new = ft_substr(*received, end + 1, ft_strlen(*received) - (end + 1));
+		free(*received);
+		*received = new;
+	}
 	else
 	{
-		if (ft_strlen(*received) > end + 1)
-		{
-			new = ft_substr(*received, end + 1,
-					ft_strlen(*received) - (end + 1));
-			free(*received);
-			*received = new;
-		}
-		else
-		{
-			free(*received);
-			*received = NULL;
-		}
+		free(*received);
+		*received = NULL;
 	}
 	return (0);
 }
