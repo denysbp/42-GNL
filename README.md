@@ -23,7 +23,7 @@ cc get_next_line.c get_next_line_utils.c main.c -D BUFFER_SIZE=42 programm.c
 <a href= "https://www.jbiet.edu.in/coursefiles/cse/HO/cse1/CP5.pdf">Artigo 1</a><br>
 <a href= "https://www.freecodecamp.org/portuguese/news/manipulacao-de-arquivos-em-c-como-abrir-e-fechar-arquivos-e-escrever-algo-neles/">Artigo 2</a>
 
-AI Usage
+### AI Usage
 
 AI was used as a support tool for:
 
