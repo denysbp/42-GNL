@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 00:53:34 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/07 00:53:35 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/22 15:27:03 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,12 +96,12 @@ int	ft_clear(char **received, size_t end, int ex)
 char	*get_next_line(int fd)
 {
 	static char	*received;
-	size_t		result;
+	ssize_t		result;
 	char		buffer[BUFFER_SIZE + 1];
 	char		*output;
 	size_t		end;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || BUFFER_SIZE >= 1000000)
 		return (NULL);
 	if (! received)
 		received = ft_strdup("");

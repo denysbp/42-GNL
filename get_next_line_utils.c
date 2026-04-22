@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 00:53:38 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/07 00:53:39 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/22 14:56:13 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ char	*ft_strjoin(char *s1, char const *s2)
 	str = malloc(len1 + len2 + 1);
 	if (! str)
 	{
+		free(s1);
 		return (NULL);
 	}
 	ft_strlcpy(str, s1, len1 + 1);
