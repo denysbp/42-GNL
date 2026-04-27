@@ -15,7 +15,7 @@ This project also helps develop a deeper understanding of memory management, str
 Example with a test main:
 
 ```bash
-cc get_next_line.c get_next_line_utils.c main.c -D BUFFER_SIZE=42 programm.c
+cc get_next_line.c get_next_line_utils.c main.c -D BUFFER_SIZE=42
 ```
 
 ## Resources
